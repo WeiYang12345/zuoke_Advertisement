@@ -1,0 +1,128 @@
+/*字体颜色*/
+.c_white {color: #fff;}
+.c_green {color: #009966;}
+.c_gray {color: #999;}
+.c_red {color: #FF0000;}
+.c_blue {color: #409EFF;}
+
+/*字体大小*/
+.f_12 {font-size: 12px;}
+.f_13 {font-size: 13px;}
+.f_14 {font-size: 14px;}
+.f_15 {font-size: 15px;}
+.f_16 {font-size: 16px;}
+.f_17 {font-size: 17px;}
+.f_18 {font-size: 18px;}
+.f_20 {font-size: 18px;}
+.f_24 {font-size: 24px;}
+.f_26 {font-size: 26px;}
+.f_30 {font-size: 30px;}
+
+/*字体加粗*/
+.b { font-weight: bold;}
+
+/*magin*/
+.mg_20 {margin: 0 20px}
+
+.mg_t5 { margin-top: 5px;}
+.mg_t10 { margin-top: 10px;}
+.mg_t15 { margin-top: 15px;}
+.mg_t20 { margin-top: 20px;}
+.mg_t30 { margin-top: 30px;}
+.mg_t40 { margin-top: 40px;}
+.mg_t50 { margin-top: 50px;}
+
+.mg_b5 { margin-bottom: 5px;}
+.mg_b10 { margin-bottom: 10px;}
+.mg_b15 { margin-bottom: 15px;}
+.mg_b20 { margin-bottom: 20px;}
+.mg_b30 { margin-bottom: 30px;}
+.mg_b50 { margin-bottom: 50px;}
+.mg_b100 { margin-bottom: 100px;}
+
+.mg_l5 { margin-left: 5px}
+.mg_l10 { margin-left: 10px}
+.mg_l15 { margin-left: 15px}
+.mg_l20 { margin-left: 20px}
+.mg_l30 { margin-left: 30px}
+.mg_l40 { margin-left: 40px}
+.mg_l50 { margin-left: 50px}
+.mg_l100 { margin-left: 100px}
+
+.mg_r10 { margin-right: 10px}
+.mg_r20 { margin-right: 20px}
+.mg_r30 { margin-right: 30px}
+.mg_r50 { margin-right: 50px}
+
+.mg_auto { margin: 0 auto;}
+
+/*padding*/
+.pd_10 { padding: 0 10px}
+.pd_20 { padding: 0 20px;}
+.pd_40 { padding: 0 40px}
+.pd_l20 { padding-left: 20px;}
+.pd_l25 { padding-left: 25px;}
+
+/*flex布局*/
+.fsc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fss {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.fse {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.fbc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fcs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.fec {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.column {flex-direction: column;}
+
+.fgrow3 { flex-grow: 3;}
+
+.fwrap { flex-wrap: wrap;}
+
+.nowrap { white-space: nowrap;}
+
+/*宽度*/
+.w100 { width: 100%;}
+.w90 { width: 90%;}
+.w60 { width: 60%;}
+.w75 { width: 75%;}
+
+/*居中*/
+.t_center { text-align: center} 
+
+/*定位*/
+.relative { position: relative} 
+.t_hid1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.in_b {
+    display: inline-block;
+}

@@ -1,0 +1,70 @@
+.events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.events .ant-badge-status {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+.notes-month {
+  text-align: center;
+  font-size: 28px;
+}
+.notes-month section {
+  font-size: 28px;
+}
+.ant-fullcalendar table {
+  height: 300px;
+}
+.cal_item {
+  display: inline-block;
+  padding: 10px;
+  background-color: #eee;
+}
+.cal_list {
+  white-space: nowrap;
+  overflow-x: auto;
+  
+}
+.date_t {
+  background-color: red;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 2px;
+  color: #fff;
+}
+// .cal_list::-webkit-scrollbar {display: none}
+.cal {
+  min-width: 900px;
+  
+  position: relative;
+  background-color: #D5DBD7;
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+.cal_i_l {
+  position: absolute;
+  top: 223px;
+  left: 1px;
+}
+.cal_i_r {
+  position: absolute;
+  top: 223px;
+  right: 1px;
+}
+
+.ant-fullcalendar-selected-day .ant-fullcalendar-value, .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value {
+  color: #666;
+  background: #fff;
+}
+.ant-fullcalendar-today .ant-fullcalendar-value, .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-value {
+    box-shadow: 0 0 0 1px #fff inset;
+}
+
+.ant-fullcalendar {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,20 @@
+.or_item {
+  width: 250px;
+  background-color: #F3F1F1;
+  padding: 10px;
+  display: inline-block;
+}
+.or_title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666;
+}
+.or_item_t {
+  width: 70px;
+  display: inline-block;
+}
+.or_list {
+  min-width: 1000px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+}
