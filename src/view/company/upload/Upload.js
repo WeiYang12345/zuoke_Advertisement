@@ -32,7 +32,7 @@ export default class Uploads extends React.Component {
     this.setState({ fileList })
   };
   render() {
-    const {addressList, previewVisible, previewImage, fileList } = this.state;
+    const { previewVisible, previewImage, fileList } = this.state;
     const uploadButton = (
       <div>
         <Icon type="plus" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './OrderList.scss';
 
 import { Button } from 'antd';
@@ -7,6 +8,10 @@ class OrderList extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {}
+  }
+  componentDidMount () {
+
   }
   render() {
     let arr = [1, 2, 3, 4,3,4];
@@ -14,13 +19,13 @@ class OrderList extends React.Component {
       <div>
         <div className="mg_t40 mg_b10">
           <span className="b mg_r20">当前订单</span>
-          <Button type="primary">添加订单</Button>
+          <Button type="primary"><Link to='/home/add'>添加订单</Link></Button>
         </div>
         <div className="or_list f_13 ">
           {
             arr.map((v, k) => {
               return (
-                <div className={`or_item ${k === 0?"":"mg_l10"}`}>
+                <div className={`or_item ${k === 0?"":"mg_l10"}`} key={k}>
                   <div className="or_title fcc f_14">
                     <span>订单号</span>
                     <span className="mg_l5">123456748562</span>

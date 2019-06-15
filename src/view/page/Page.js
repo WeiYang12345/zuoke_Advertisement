@@ -1,11 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+// import { NavLink } from 'react-router-dom';
+import {  addTodoWithDispatch,changeObj } from '../../store1/action.js';
 import './Page.scss';
 import Table from './table/Table';
-import {
-  Button,
-  Form,
-} from 'antd';
+import { Button, } from 'antd';
 
 class Page extends React.Component {
   constructor(props) {
@@ -14,7 +13,15 @@ class Page extends React.Component {
 
     }
   };
-
+  modify = () => {
+    console.log(this.props)
+    this.props.addCount('修改公司信息')
+    this.props.history.push('/home/company')
+  };
+  componentDidMount () {
+    console.log(this.props)
+    
+  }
   render() {
 
     return (
@@ -36,8 +43,8 @@ class Page extends React.Component {
             </div>
             <div className="mg_t20">
               <Button size="small" type="link">待审核</Button>
-              <Button size="small" type="primary">
-                <NavLink to='/home/company'>修改公司信息</NavLink>
+              <Button onClick={this.modify} size="small" type="primary">
+               修改公司信息
               </Button>
             </div>
           </div>
@@ -88,4 +95,18 @@ class Page extends React.Component {
 }
 
 
-export default Page;
+// export default Page;
+const mapStateToProps = (state, ownProps) => {
+  // console.log(state)
+  // console.log(ownProps)
+  return {
+    state: state.reducer
+  }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    addCount: (obj) => dispatch(addTodoWithDispatch(obj)),
+    bbb: (obj) => dispatch(changeObj(obj)),
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Page)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Badge, Button, Icon, message } from 'antd';
+import { Calendar, Button, Icon, message } from 'antd';
 import './Cal.scss';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
@@ -7,42 +7,42 @@ moment.locale('zh-cn');
 
 class Cal extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {}
   };
-  getListData(value) {
-    let listData;
-    switch (value.date()) {
-      case 8:
-        listData = [
-          { type: 'warning', content: 'This is warning event.' },
-          { type: 'success', content: 'This is usual event.' },
-        ];
-        break;
-      case 10:
-        listData = [
-          { type: 'warning', content: 'This is warning event.' },
-          { type: 'success', content: 'This is usual event.' },
-          { type: 'error', content: 'This is error event.' },
-        ];
-        break;
-      case 15:
-        listData = [
-          { type: 'warning', content: 'This is warning event' },
-          { type: 'success', content: 'This is very long usual event。。....' },
-          { type: 'error', content: 'This is error event 1.' },
-          { type: 'error', content: 'This is error event 2.' },
-          { type: 'error', content: 'This is error event 3.' },
-          { type: 'error', content: 'This is error event 4.' },
-        ];
-        break;
-      default:
-    }
-    return listData || [];
-  }
+  // getListData(value) {
+  //   let listData;
+  //   switch (value.date()) {
+  //     case 8:
+  //       listData = [
+  //         { type: 'warning', content: 'This is warning event.' },
+  //         { type: 'success', content: 'This is usual event.' },
+  //       ];
+  //       break;
+  //     case 10:
+  //       listData = [
+  //         { type: 'warning', content: 'This is warning event.' },
+  //         { type: 'success', content: 'This is usual event.' },
+  //         { type: 'error', content: 'This is error event.' },
+  //       ];
+  //       break;
+  //     case 15:
+  //       listData = [
+  //         { type: 'warning', content: 'This is warning event' },
+  //         { type: 'success', content: 'This is very long usual event。。....' },
+  //         { type: 'error', content: 'This is error event 1.' },
+  //         { type: 'error', content: 'This is error event 2.' },
+  //         { type: 'error', content: 'This is error event 3.' },
+  //         { type: 'error', content: 'This is error event 4.' },
+  //       ];
+  //       break;
+  //     default:
+  //   }
+  //   return listData || [];
+  // }
   dateCellRender = (value) => {
     // console.log(value._d.getMonth())
-    // console.log(value._d.getDate())
-    const listData = this.getListData(value);
+    // const listData = this.getListData(value);
     if (value._d.getDate() === 28) {
       return <div className="date_t mg_b15 f_12">有</div>
     } else if (value._d.getDate() === 29) {
@@ -161,9 +161,6 @@ class Cal extends React.Component {
           </div>
         </div>
       </div>
-
-
-
 
     )
   }

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Company.scss';
-import { Button, Input, Cascader, Icon } from 'antd';
+import { addTodoWithDispatch } from '../../store1/action';
+import { connect } from 'react-redux';
+import { Button, Input, Cascader } from 'antd';
 import { get } from '../../request/request';
 import Upload from './upload/Upload';
 const { TextArea } = Input;
@@ -33,9 +35,15 @@ class Company extends React.Component {
     })
   };
   componentDidMount() {
+    this.init()
     this.address();
+    
+    console.log(this.props.state)
 
 
+  };
+  init = () => {
+    this.props.addCount('修改公司信息')
   };
   onChange = (value) => {
     console.log(value)
@@ -98,4 +106,15 @@ class Company extends React.Component {
     )
   }
 }
-export default Company;
+
+const mapStateToProps = (state,ownProps) => {
+  return {
+    state: state.reducer
+  }
+};
+const mapDispatchToProps = (dispatch,ownProps) => {
+  return {
+    addCount: (text) => dispatch(addTodoWithDispatch(text)),
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Company);

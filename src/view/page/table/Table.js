@@ -1,7 +1,7 @@
 import React from 'react';
 import './Table.scss';
 import { NavLink } from 'react-router-dom';
-import { Input, DatePicker, Select, Button, Table, Divider, Tag } from 'antd';
+import { Input, DatePicker, Select, Button, Table } from 'antd';
 const Option = Select.Option;
 const { RangePicker } = DatePicker;
 

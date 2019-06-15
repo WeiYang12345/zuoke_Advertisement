@@ -7,7 +7,8 @@ import OrderList from './orderList/OrderList';
 class Order extends React.Component {
 
   constructor (props) {
-    super(props)
+    super(props);
+    this.state = {}
   };
 
   render () {
